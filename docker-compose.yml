@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: ./Dockerfile
+    container_name: v2_interview_candidate
+    ports:
+      - "8000:8000"  # Exposing Django's default port
+    volumes:
+      - ./app:/app  # Mount the app folder so changes reflect in the container
