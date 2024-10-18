@@ -14,3 +14,4 @@ class Vm(models.Model):
 	ram = models.IntegerField(default=4, null=True)
 	server = models.ForeignKey(Server, null=True, on_delete=models.SET_NULL)
 	active = models.BooleanField(default=True)
+	ssh_key = models.TextField(null=True, blank=True)
